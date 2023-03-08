@@ -11,7 +11,7 @@
 * Be able to get help for packages and functions
 * Be able to create objects by writing and running code in the console
 
-Please note that if you're completely new to R, we don't expect you to fully understand everything in this chapter. Almost all of the concepts will be further explained in the workshop and you will feel more comfortable with them with continued practice. However, the first workshop session in particular will run much smoother if you have some familiarity with the basics.
+Please note that if you're completely new to R, we don't expect you to fully understand everything in this chapter. Almost all of the concepts will be further explained in the workshop and you will feel more comfortable with them with continued practice. However, the workshop will run much smoother if you have some familiarity with the basics.
 
 Download the [RStudio IDE Cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf).
 
@@ -293,22 +293,22 @@ One very useful feature of R Studio is  tab auto-complete for functions (see Fig
 
 A large part of your coding will involve creating and manipulating objects. Objects contain stuff. That stuff can be numbers, words, or the result of operations and analyses. You assign content to an object using `<-`.
 
-Run the following code in the console, but change the values of `name` and `age` to your own details and change `christmas` to a holiday or date you care about.
+Run the following code in the console, but change the values of `name` and `age` to your own details and change `new_year` to a holiday or date you care about.
 
 
 ```r
 name <- "Emily"
-age <- 36
+age <- 37
 today <- Sys.Date()
-christmas <- as.Date("2022-12-25")
+new_year <- as.Date("2023-12-31")
 ```
 
 You'll see that four objects now appear in the environment pane:
 
-* `name` is <a class='glossary' target='_blank' title='A data type representing strings of text.' href='https://psyteachr.github.io/glossary/c#character'>character</a> (text) data. In order for R to recognise it as character data, it **must** be enclosed in double quotation marks `" "`.
-* `age` is <a class='glossary' target='_blank' title='A data type representing a real decimal number or integer.' href='https://psyteachr.github.io/glossary/n#numeric'>numeric</a> data. In order for R to recognise this as a number, it **must not** be enclosed in quotation marks.
+* `name` is <a class='glossary' target='_blank' title='A data type representing strings of text.' href='https://psyteachr.github.io/glossary/c#character'>character</a> (text) data. In order for R to recognize it as character data, it **must** be enclosed in double quotation marks `" "`.
+* `age` is <a class='glossary' target='_blank' title='A data type representing a real decimal number or integer.' href='https://psyteachr.github.io/glossary/n#numeric'>numeric</a> data. In order for R to recognize this as a number, it **must not** be enclosed in quotation marks.
 * `today` stores the result of the function `Sys.Date()`. This function returns your computer system's date. Unlike `name` and `age`, which are hard-coded (i.e., they will always return the values you enter), the contents of the object `today` will change dynamically with the date. That is, if you run that function tomorrow, it will update the date to tomorrow's date.
-* `christmas` is also a date but it's hard-coded as a very specific date. It's wrapped within the `as.Date()` function that tells R to interpret the character string you provide as date rather than text.
+* `new_year` is also a date but it's hard-coded as a very specific date. It's wrapped within the `as.Date()` function that tells R to interpret the character string you provide as date rather than text.
 
 ::: {.try data-latex=""}
 
@@ -322,7 +322,7 @@ Finally, a key concept to understand is that objects can interact and you can sa
 ```r
 decade <- age + 10
 full_name <- paste(name, "Nordmann")
-how_long <- christmas - today
+how_long <- new_year - today
 ```
 
 

@@ -1,5 +1,5 @@
 
-# Session 2 {#day-2}
+# Section 2 {#sec-2}
 
 For the second session, we're going to do a whistle-stop tour through the following paper:
 

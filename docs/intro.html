@@ -81,7 +81,7 @@
 <li><a class="" href="installing-r.html"><span class="header-section-number">1</span> Installing R</a></li>
 <li><a class="active" href="intro.html"><span class="header-section-number">2</span> Intro to R and RStudio</a></li>
 <li><a class="" href="sec-1.html"><span class="header-section-number">3</span> Section 1</a></li>
-<li><a class="" href="day-2.html"><span class="header-section-number">4</span> Session 2</a></li>
+<li><a class="" href="sec-2.html"><span class="header-section-number">4</span> Section 2</a></li>
 <li class="book-part">Appendices</li>
 <li><a class="" href="glossary.html"><span class="header-section-number">A</span> Glossary</a></li>
 <li><a class="" href="license.html">License</a></li>
@@ -107,7 +107,7 @@
 <li>Be able to get help for packages and functions</li>
 <li>Be able to create objects by writing and running code in the console</li>
 </ul>
-<p>Please note that if you're completely new to R, we don't expect you to fully understand everything in this chapter. Almost all of the concepts will be further explained in the workshop and you will feel more comfortable with them with continued practice. However, the first workshop session in particular will run much smoother if you have some familiarity with the basics.</p>
+<p>Please note that if you're completely new to R, we don't expect you to fully understand everything in this chapter. Almost all of the concepts will be further explained in the workshop and you will feel more comfortable with them with continued practice. However, the workshop will run much smoother if you have some familiarity with the basics.</p>
 <p>Download the <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/rstudio-ide.pdf">RStudio IDE Cheatsheet</a>.</p>
 </div>
 <div id="intro-r-rstudio" class="section level2" number="2.2">
@@ -368,22 +368,22 @@ Figure 2.2: Tab auto-complete
 <span class="header-section-number">2.7</span> Objects<a class="anchor" aria-label="anchor" href="#objects"><i class="fas fa-link"></i></a>
 </h2>
 <p>A large part of your coding will involve creating and manipulating objects. Objects contain stuff. That stuff can be numbers, words, or the result of operations and analyses. You assign content to an object using <code>&lt;-</code>.</p>
-<p>Run the following code in the console, but change the values of <code>name</code> and <code>age</code> to your own details and change <code>christmas</code> to a holiday or date you care about.</p>
+<p>Run the following code in the console, but change the values of <code>name</code> and <code>age</code> to your own details and change <code>new_year</code> to a holiday or date you care about.</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">name</span> <span class="op">&lt;-</span> <span class="st">"Emily"</span>
-<span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">36</span>
+<span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">37</span>
 <span class="va">today</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">christmas</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2022-12-25"</span><span class="op">)</span></code></pre></div>
+<span class="va">new_year</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="st">"2023-12-31"</span><span class="op">)</span></code></pre></div>
 <p>You'll see that four objects now appear in the environment pane:</p>
 <ul>
 <li>
-<code>name</code> is <a class="glossary" target="_blank" title="A data type representing strings of text." href="https://psyteachr.github.io/glossary/c#character">character</a> (text) data. In order for R to recognise it as character data, it <strong>must</strong> be enclosed in double quotation marks <code>" "</code>.</li>
+<code>name</code> is <a class="glossary" target="_blank" title="A data type representing strings of text." href="https://psyteachr.github.io/glossary/c#character">character</a> (text) data. In order for R to recognize it as character data, it <strong>must</strong> be enclosed in double quotation marks <code>" "</code>.</li>
 <li>
-<code>age</code> is <a class="glossary" target="_blank" title="A data type representing a real decimal number or integer." href="https://psyteachr.github.io/glossary/n#numeric">numeric</a> data. In order for R to recognise this as a number, it <strong>must not</strong> be enclosed in quotation marks.</li>
+<code>age</code> is <a class="glossary" target="_blank" title="A data type representing a real decimal number or integer." href="https://psyteachr.github.io/glossary/n#numeric">numeric</a> data. In order for R to recognize this as a number, it <strong>must not</strong> be enclosed in quotation marks.</li>
 <li>
 <code>today</code> stores the result of the function <code><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date()</a></code>. This function returns your computer system's date. Unlike <code>name</code> and <code>age</code>, which are hard-coded (i.e., they will always return the values you enter), the contents of the object <code>today</code> will change dynamically with the date. That is, if you run that function tomorrow, it will update the date to tomorrow's date.</li>
 <li>
-<code>christmas</code> is also a date but it's hard-coded as a very specific date. It's wrapped within the <code><a href="https://rdrr.io/r/base/as.Date.html">as.Date()</a></code> function that tells R to interpret the character string you provide as date rather than text.</li>
+<code>new_year</code> is also a date but it's hard-coded as a very specific date. It's wrapped within the <code><a href="https://rdrr.io/r/base/as.Date.html">as.Date()</a></code> function that tells R to interpret the character string you provide as date rather than text.</li>
 </ul>
 <div class="try">
 <p>To print the contents of an object, type the object's name in the console and press enter. Try printing all four objects now.</p>
@@ -392,7 +392,7 @@ Figure 2.2: Tab auto-complete
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">decade</span> <span class="op">&lt;-</span> <span class="va">age</span> <span class="op">+</span> <span class="fl">10</span>
 <span class="va">full_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">name</span>, <span class="st">"Nordmann"</span><span class="op">)</span>
-<span class="va">how_long</span> <span class="op">&lt;-</span> <span class="va">christmas</span> <span class="op">-</span> <span class="va">today</span></code></pre></div>
+<span class="va">how_long</span> <span class="op">&lt;-</span> <span class="va">new_year</span> <span class="op">-</span> <span class="va">today</span></code></pre></div>
 </div>
 <div id="help" class="section level2" number="2.8">
 <h2>

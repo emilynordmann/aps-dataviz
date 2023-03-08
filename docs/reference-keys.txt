@@ -124,7 +124,7 @@ facets
 exercises
 glossary-day1
 resources-viz
-day-2
+sec-2
 set-up
 simulated-dataset
 checking-and-cleaning-your-data
